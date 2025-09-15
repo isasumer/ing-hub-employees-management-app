@@ -6,4 +6,4 @@ export class EmployeeList extends LitElement {
   }
 }
 
-customElements.define('employee-list-view', EmployeeList);
+customElements.define('employee-list', EmployeeList);
