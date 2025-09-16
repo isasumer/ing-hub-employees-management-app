@@ -5,22 +5,11 @@ import './views';
 export class App extends LitElement {
   constructor() {
     super();
-    this._onLanguageChange = () => {
-        console.log('Language change detected, updating UI');
-        this.requestUpdate();
-    };
-    window.addEventListener('app-language', this._onLanguageChange);
-  }
-
-  disconnectedCallback() {
-    window.removeEventListener('app-language', this._onLanguageChange);
-    super.disconnectedCallback();
   }
 
   firstUpdated() {
     this.router = createRouter(this.renderRoot?.querySelector('#outlet'));
     this.router.setRoutes(routes);
-
   }
 
   render() {

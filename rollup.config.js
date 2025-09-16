@@ -21,7 +21,11 @@ export default {
     }
   },
   plugins: [
-    replace({preventAssignment: false, 'Reflect.decorate': 'undefined'}),
+    replace({
+      preventAssignment: false,
+      'Reflect.decorate': 'undefined',
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
     resolve(),
     /**
      * This minification setup serves the static site generation.

@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import '../components/language-selection/index.js';
 import { getMessages } from '../i18n/getLanguages.js';
+import { addLanguageChangeListener, removeLanguageChangeListener } from '../utils/languageHelper.js';
 
 export class AppHeader extends LitElement {
 
@@ -43,11 +44,11 @@ export class AppHeader extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this._onLanguageChange = () => this.requestUpdate();
-    window.addEventListener('app-language', this._onLanguageChange);
+    addLanguageChangeListener(this._onLanguageChange);
   }
 
   disconnectedCallback() {
-    window.removeEventListener('app-language', this._onLanguageChange);
+    removeLanguageChangeListener(this._onLanguageChange);
     super.disconnectedCallback();
   }
 }

@@ -6,7 +6,7 @@ import {Router} from '@vaadin/router';
 export const views = [
   {
     path: '',
-    component: 'home-view',
+    component: 'employee-list',
     title: '',
     action: async () => await import('./pages/home'),
   },

@@ -1,8 +1,8 @@
-import {configureStore} from '@reduxjs/toolkit';
-import appReducer from './app-slice';
+import { configureStore } from "@reduxjs/toolkit";
+import storiesReducer from "./stories";
 
-export const store = configureStore({
-  reducer: {
-    app: appReducer,
-  },
+const store = configureStore({
+  reducer: { stories: storiesReducer },
 });
+
+export default store;
