@@ -36,7 +36,7 @@ export class EmployeeList extends LitElement {
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
       <div class="employee-list">
         <div class="employee-list-header">
-          <h1 class="title">Employee List</h1>
+          <div class="title">Employee List</div>
           <div class="view-buttons">
             <button
               class="view-btn"

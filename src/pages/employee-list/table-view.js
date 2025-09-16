@@ -47,13 +47,15 @@ export class TableView extends LitElement {
   }
   render() {
     return html`<div>
-      <table>
+      <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
+
+      <table class="table">
         <thead>
           <tr>
             <th>
               <input
                 type="checkbox"
-                class="table-checkbox"
+                class="checkbox"
                 @change="${this.toggleSelectAll}"
               />
             </th>
@@ -75,17 +77,41 @@ export class TableView extends LitElement {
                 <td class="checkbox-row">
                   <input
                     type="checkbox"
-                    class="table-checkbox"
+                    class="checkbox"
                     .checked=${this.selectedEmployees.includes(employee.id)}
                     @click="${(event) => this.toggleSelect(event, employee.id)}"
                   />
                 </td>
-                ${Object.values(employee).map(
-                  (item) => html` <td>${item}</td> `
-                )}
+                ${Object.entries(employee)
+                  .filter(([key, value]) => key !== 'id')
+                  .map(
+                    ([key, value]) => html` <td class=${key}>${value}</td> `
+                  )}
                 <td>
-                  <button>${getMessages('003')}</button>
-                  <button>${getMessages('004')}</button>
+                  <div class="action-buttons">
+                    <button
+                      class="action-btn"
+                      @click=${() => this.editEmployee(employee.id)}
+                      title="Table"
+                    >
+                      <img
+                        class="view"
+                        src="src/assets/icons/edit.svg"
+                        alt="table"
+                      />
+                    </button>
+                    <button
+                      class="action-btn"
+                      @click=${() => this.deleteEmployee(employee.id)}
+                      title="Grid"
+                    >
+                      <img
+                        class="view"
+                        src="src/assets/icons/trash.svg"
+                        alt="grid"
+                      />
+                    </button>
+                  </div>
                 </td>
               </tr>
             `
