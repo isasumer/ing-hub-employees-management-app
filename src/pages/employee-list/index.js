@@ -2,6 +2,8 @@ import {LitElement, html} from 'lit';
 import {getEmployees} from '../../utils/storageHelper';
 import './grid-view';
 import './table-view';
+import { addLanguageChangeListener, removeLanguageChangeListener } from '../../utils/languageHelper.js';
+import { getMessages } from '../../i18n/getLanguages.js';
 
 export class EmployeeList extends LitElement {
   static properties = {
@@ -36,7 +38,7 @@ export class EmployeeList extends LitElement {
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
       <div class="employee-list">
         <div class="employee-list-header">
-          <div class="title">Employee List</div>
+          <div class="title">${getMessages('019')}</div>
           <div class="view-buttons">
             <button
               class="view-btn"
@@ -69,6 +71,17 @@ export class EmployeeList extends LitElement {
         </div>
       </div>
     `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._onLanguageChange = () => this.requestUpdate();
+    addLanguageChangeListener(this._onLanguageChange);
+  }
+
+  disconnectedCallback() {
+    removeLanguageChangeListener(this._onLanguageChange);
+    super.disconnectedCallback();
   }
 }
 

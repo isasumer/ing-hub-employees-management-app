@@ -1,6 +1,7 @@
 import {LitElement, html} from 'lit';
 import {getEmployees} from '../../utils/storageHelper';
-import {getMessages} from '../../i18n/getLanguages';
+import { addLanguageChangeListener, removeLanguageChangeListener } from '../../utils/languageHelper.js';
+import { getMessages } from '../../i18n/getLanguages.js';
 
 export class TableView extends LitElement {
   static properties = {
@@ -120,7 +121,20 @@ export class TableView extends LitElement {
       </table>
     </div>`;
   }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._onLanguageChange = () => this.requestUpdate();
+    addLanguageChangeListener(this._onLanguageChange);
+  }
+
+  disconnectedCallback() {
+    removeLanguageChangeListener(this._onLanguageChange);
+    super.disconnectedCallback();
+  }
 }
+
+
 
 customElements.define('table-view', TableView);
 

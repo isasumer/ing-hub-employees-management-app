@@ -1,6 +1,7 @@
 import {LitElement, html} from 'lit';
 import {getEmployees} from '../../utils/storageHelper';
 import {getMessages} from '../../i18n/getLanguages';
+import { addLanguageChangeListener, removeLanguageChangeListener } from '../../utils/languageHelper.js';
 
 export class GridView extends LitElement {
   static properties = {
@@ -26,6 +27,7 @@ export class GridView extends LitElement {
     });
   }
   render() {
+;
     return html`
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
       <div
@@ -66,6 +68,16 @@ export class GridView extends LitElement {
   }
 
   renderEmployeeCardItem(key, value) {
+    const detailsMap = {
+      firstName: getMessages('008'),
+      lastName: getMessages('009'),
+      doe: getMessages('010'),
+      dob: getMessages('011'),
+      phone: getMessages('012'),
+      email: getMessages('013'),
+      department: getMessages('014'),
+      position: getMessages('015'),
+    };
     return html`
       <div class="employee-card-item">
         <div class="employee-card-item-label">${detailsMap[key]}</div>
@@ -73,17 +85,18 @@ export class GridView extends LitElement {
       </div>
     `;
   }
+  connectedCallback() {
+    super.connectedCallback();
+    this._onLanguageChange = () => this.requestUpdate();
+    addLanguageChangeListener(this._onLanguageChange);
+  }
+
+  disconnectedCallback() {
+    removeLanguageChangeListener(this._onLanguageChange);
+    super.disconnectedCallback();
+  }
 }
 
-const detailsMap = {
-  firstName: getMessages('008'),
-  lastName: getMessages('009'),
-  doe: getMessages('010'),
-  dob: getMessages('011'),
-  phone: getMessages('012'),
-  email: getMessages('013'),
-  department: getMessages('014'),
-  position: getMessages('015'),
-};
+
 
 customElements.define('grid-view', GridView);
