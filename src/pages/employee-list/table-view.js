@@ -95,7 +95,7 @@ export class TableView extends LitElement {
                       title="Table"
                     >
                       <img
-                        class="view"
+                        class="edit-icon"
                         src="src/assets/icons/edit.svg"
                         alt="table"
                       />
@@ -106,7 +106,7 @@ export class TableView extends LitElement {
                       title="Grid"
                     >
                       <img
-                        class="view"
+                        class="delete-icon"
                         src="src/assets/icons/trash.svg"
                         alt="grid"
                       />
