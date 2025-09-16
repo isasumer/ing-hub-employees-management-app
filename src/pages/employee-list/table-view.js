@@ -46,6 +46,68 @@ export class TableView extends LitElement {
       ? this.selectedEmployees.filter((id) => id !== employeeId)
       : [...this.selectedEmployees, employeeId];
   }
+
+  nextPage() {
+    if (this.currentPage * this.pageSize < this.employees.length) {
+      this.currentPage += 1;
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage -= 1;
+    }
+  }
+
+  getPaginatedEmployees() {
+    const start = (this.currentPage - 1) * this.pageSize;
+    const end = this.currentPage * this.pageSize;
+    return this.employees.slice(start, end);
+  }
+
+  renderPagination() {
+    const totalPages = Math.ceil(this.employees.length / this.pageSize);
+    const pageNumbers = [];
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= this.currentPage - 2 && i <= this.currentPage + 2)
+      ) {
+        pageNumbers.push(i);
+      } else if (
+        i === this.currentPage - 3 ||
+        i === this.currentPage + 3
+      ) {
+        pageNumbers.push('...');
+      }
+    }
+
+    return html`
+      <div class="pagination-controls">
+        <button @click="${this.previousPage}" ?disabled=${this.currentPage === 1}>&lt;</button>
+        ${pageNumbers.map(
+          (page) =>
+            html`<button
+              @click="${() => this.goToPage(page)}"
+              class="${page === this.currentPage ? 'active' : ''}"
+              ?disabled=${page === '...'}
+            >
+              ${page}
+            </button>`
+        )}
+        <button @click="${this.nextPage}" ?disabled=${this.currentPage === totalPages}>&gt;</button>
+      </div>
+    `;
+  }
+
+  goToPage(page) {
+    if (page !== '...') {
+      this.currentPage = page;
+    }
+  }
+
   render() {
     return html`<div>
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
@@ -72,7 +134,7 @@ export class TableView extends LitElement {
           </tr>
         </thead>
         <tbody>
-          ${this.employees?.map(
+          ${this.getPaginatedEmployees()?.map(
             (employee) => html`
               <tr>
                 <td class="checkbox-row">
@@ -84,7 +146,7 @@ export class TableView extends LitElement {
                   />
                 </td>
                 ${Object.entries(employee)
-                  .filter(([key, value]) => key !== 'id')
+                  .filter(([key]) => key !== 'id')
                   .map(
                     ([key, value]) => html` <td class=${key}>${value}</td> `
                   )}
@@ -119,6 +181,7 @@ export class TableView extends LitElement {
           )}
         </tbody>
       </table>
+      ${this.renderPagination()}
     </div>`;
   }
 

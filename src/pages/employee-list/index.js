@@ -33,6 +33,12 @@ export class EmployeeList extends LitElement {
     this.requestUpdate();
   }
 
+  updatePagination(currentPage, pageSize) {
+    this.currentPage = currentPage;
+    this.pageSize = pageSize;
+    this.requestUpdate();
+  }
+
   render() {
     return html`
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
@@ -66,8 +72,8 @@ export class EmployeeList extends LitElement {
         </div>
         <div class="list-container">
           ${this.view === 'grid'
-            ? html`<grid-view></grid-view>`
-            : html`<table-view></table-view>`}
+            ? html`<grid-view .currentPage=${this.currentPage} .pageSize=${this.pageSize}></grid-view>`
+            : html`<table-view .currentPage=${this.currentPage} .pageSize=${this.pageSize}></table-view>`}
         </div>
       </div>
     `;
