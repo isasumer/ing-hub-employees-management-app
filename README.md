@@ -15,4 +15,4 @@ The application consist of the functionality below:
 - It has internationalization with English and Turkish language
 - Designed each component/page of the application to be viewed both in desktop mode and in responsive 
 mode without any flaws.
-
+![alt-text](https://github.com/isasumer/ing-hub-employees-management-app/blob/master/video%20screen.gif)
