@@ -1,11 +1,11 @@
-[
+﻿[
   {
     "id": "1",
     "firstName": "Jennifer",
     "lastName": "Andrews",
     "doe": "2024-08-09",
     "dob": "1983-12-10",
-    "phone": "(869)169-4833x190",
+    "phone": "+90 123 456 78 89",
     "email": "jennifer.andrews@hotmail.com",
     "department": "Analytics",
     "position": "Junior"
@@ -16,7 +16,7 @@
     "lastName": "Lutz",
     "doe": "2023-06-12",
     "dob": "1986-01-10",
-    "phone": "(972)913-8326x09022",
+    "phone": "+90 123 456 78 89",
     "email": "heather.lutz@yahoo.com",
     "department": "Finance",
     "position": "Medior"
@@ -27,7 +27,7 @@
     "lastName": "Curtis",
     "doe": "2024-12-13",
     "dob": "1982-04-18",
-    "phone": "650-405-3458x7487",
+    "phone": "+90 123 456 78 89",
     "email": "william.curtis@hotmail.com",
     "department": "HR",
     "position": "Junior"
@@ -38,7 +38,7 @@
     "lastName": "Douglas",
     "doe": "2024-11-08",
     "dob": "1985-02-07",
-    "phone": "602-660-9137x1088",
+    "phone": "+90 123 456 78 89",
     "email": "brooke.douglas@yahoo.com",
     "department": "HR",
     "position": "Senior"
@@ -49,7 +49,7 @@
     "lastName": "Dorsey",
     "doe": "2024-09-26",
     "dob": "1995-02-23",
-    "phone": "692.710.3129x6896",
+    "phone": "+90 123 456 78 89",
     "email": "katelyn.dorsey@gmail.com",
     "department": "Marketing",
     "position": "Junior"
@@ -60,7 +60,7 @@
     "lastName": "Adams",
     "doe": "2022-04-20",
     "dob": "1987-06-02",
-    "phone": "635.781.8119",
+    "phone": "+90 123 456 78 89",
     "email": "matthew.adams@gmail.com",
     "department": "Marketing",
     "position": "Lead"
@@ -71,7 +71,7 @@
     "lastName": "Pham",
     "doe": "2023-12-01",
     "dob": "1987-03-27",
-    "phone": "+1-804-980-3869x393",
+    "phone": "+90 123 456 78 89",
     "email": "megan.pham@hotmail.com",
     "department": "Marketing",
     "position": "Intern"
@@ -82,7 +82,7 @@
     "lastName": "Perry",
     "doe": "2023-03-07",
     "dob": "1989-09-30",
-    "phone": "147.548.9164x62534",
+    "phone": "+90 123 456 78 89",
     "email": "bradley.perry@gmail.com",
     "department": "Operations",
     "position": "Senior"
@@ -93,7 +93,7 @@
     "lastName": "Drake",
     "doe": "2024-10-06",
     "dob": "1974-05-30",
-    "phone": "740.090.9709x47902",
+    "phone": "+90 123 456 78 89",
     "email": "caitlin.drake@yahoo.com",
     "department": "Marketing",
     "position": "Medior"
@@ -104,7 +104,7 @@
     "lastName": "Griffin",
     "doe": "2021-11-05",
     "dob": "1974-09-17",
-    "phone": "(494)074-5318x336",
+    "phone": "+90 123 456 78 89",
     "email": "timothy.griffin@hotmail.com",
     "department": "Finance",
     "position": "Senior"
@@ -115,7 +115,7 @@
     "lastName": "Duffy",
     "doe": "2022-12-29",
     "dob": "1972-02-16",
-    "phone": "6982317330",
+    "phone": "+90 123 456 78 89",
     "email": "anthony.duffy@yahoo.com",
     "department": "Operations",
     "position": "Manager"
@@ -126,7 +126,7 @@
     "lastName": "Nguyen",
     "doe": "2022-08-03",
     "dob": "1992-12-29",
-    "phone": "942.563.3609x227",
+    "phone": "+90 123 456 78 89",
     "email": "gregory.nguyen@yahoo.com",
     "department": "Marketing",
     "position": "Junior"
@@ -137,7 +137,7 @@
     "lastName": "Duncan",
     "doe": "2024-02-24",
     "dob": "1973-03-20",
-    "phone": "001-059-043-2237x488",
+    "phone": "+90 123 456 78 89",
     "email": "loretta.duncan@hotmail.com",
     "department": "Operations",
     "position": "Intern"
@@ -148,7 +148,7 @@
     "lastName": "Castro",
     "doe": "2022-12-11",
     "dob": "1988-07-14",
-    "phone": "490.838.7940",
+    "phone": "+90 123 456 78 89",
     "email": "joanna.castro@hotmail.com",
     "department": "Finance",
     "position": "Senior"
@@ -159,7 +159,7 @@
     "lastName": "Green",
     "doe": "2022-04-07",
     "dob": "1975-12-28",
-    "phone": "+1-255-473-9966x1639",
+    "phone": "+90 123 456 78 89",
     "email": "bryan.green@gmail.com",
     "department": "Operations",
     "position": "Lead"
@@ -170,7 +170,7 @@
     "lastName": "Warner",
     "doe": "2024-01-11",
     "dob": "1996-06-25",
-    "phone": "495-451-2296x8036",
+    "phone": "+90 123 456 78 89",
     "email": "jon.warner@gmail.com",
     "department": "Marketing",
     "position": "Lead"
@@ -181,7 +181,7 @@
     "lastName": "Gray",
     "doe": "2024-04-11",
     "dob": "1993-10-15",
-    "phone": "(266)897-4809x43631",
+    "phone": "+90 123 456 78 89",
     "email": "maria.gray@yahoo.com",
     "department": "Tech",
     "position": "Lead"
@@ -192,7 +192,7 @@
     "lastName": "Suarez",
     "doe": "2024-10-23",
     "dob": "1983-12-15",
-    "phone": "+1-359-644-5175x19973",
+    "phone": "+90 123 456 78 89",
     "email": "kathleen.suarez@gmail.com",
     "department": "Analytics",
     "position": "Intern"
@@ -203,7 +203,7 @@
     "lastName": "Chambers",
     "doe": "2021-08-14",
     "dob": "1986-10-26",
-    "phone": "001-897-213-8389",
+    "phone": "+90 123 456 78 89",
     "email": "kayla.chambers@yahoo.com",
     "department": "Operations",
     "position": "Intern"
@@ -214,7 +214,7 @@
     "lastName": "Williams",
     "doe": "2023-12-11",
     "dob": "1992-03-02",
-    "phone": "8245791652",
+    "phone": "+90 123 456 78 89",
     "email": "wendy.williams@gmail.com",
     "department": "Marketing",
     "position": "Intern"
@@ -225,7 +225,7 @@
     "lastName": "Maddox",
     "doe": "2020-12-14",
     "dob": "1990-10-12",
-    "phone": "+1-532-552-6384x4857",
+    "phone": "+90 123 456 78 89",
     "email": "laura.maddox@yahoo.com",
     "department": "Marketing",
     "position": "Senior"
@@ -236,7 +236,7 @@
     "lastName": "Giles",
     "doe": "2025-08-23",
     "dob": "1979-05-05",
-    "phone": "001-362-161-3855x67904",
+    "phone": "+90 123 456 78 89",
     "email": "joyce.giles@hotmail.com",
     "department": "Operations",
     "position": "Intern"
@@ -247,7 +247,7 @@
     "lastName": "Adams",
     "doe": "2025-04-08",
     "dob": "1980-11-23",
-    "phone": "5504776915",
+    "phone": "+90 123 456 78 89",
     "email": "michelle.adams@gmail.com",
     "department": "Marketing",
     "position": "Junior"
@@ -258,7 +258,7 @@
     "lastName": "Campbell",
     "doe": "2023-01-10",
     "dob": "1973-12-14",
-    "phone": "(642)411-2861x82367",
+    "phone": "+90 123 456 78 89",
     "email": "tyler.campbell@yahoo.com",
     "department": "Marketing",
     "position": "Junior"
@@ -269,7 +269,7 @@
     "lastName": "Hurley",
     "doe": "2020-12-24",
     "dob": "2003-03-31",
-    "phone": "001-039-273-2366x18771",
+    "phone": "+90 123 456 78 89",
     "email": "raven.hurley@gmail.com",
     "department": "Analytics",
     "position": "Manager"
@@ -280,7 +280,7 @@
     "lastName": "Stuart",
     "doe": "2023-06-27",
     "dob": "1973-11-22",
-    "phone": "075.454.5384x282",
+    "phone": "+90 123 456 78 89",
     "email": "ashley.stuart@yahoo.com",
     "department": "Analytics",
     "position": "Medior"
@@ -291,7 +291,7 @@
     "lastName": "Pierce",
     "doe": "2024-01-29",
     "dob": "1978-10-13",
-    "phone": "288-240-9309",
+    "phone": "+90 123 456 78 89",
     "email": "todd.pierce@gmail.com",
     "department": "Tech",
     "position": "Lead"
@@ -302,7 +302,7 @@
     "lastName": "Allen",
     "doe": "2025-07-21",
     "dob": "1972-06-26",
-    "phone": "580-829-7553",
+    "phone": "+90 123 456 78 89",
     "email": "jeffrey.allen@gmail.com",
     "department": "Analytics",
     "position": "Intern"
@@ -313,7 +313,7 @@
     "lastName": "Orozco",
     "doe": "2021-03-31",
     "dob": "1988-03-14",
-    "phone": "+1-661-296-0832x35015",
+    "phone": "+90 123 456 78 89",
     "email": "jenna.orozco@gmail.com",
     "department": "Operations",
     "position": "Medior"
@@ -324,7 +324,7 @@
     "lastName": "Allen",
     "doe": "2024-07-09",
     "dob": "1981-03-17",
-    "phone": "270-977-2035",
+    "phone": "+90 123 456 78 89",
     "email": "morgan.allen@hotmail.com",
     "department": "Marketing",
     "position": "Junior"
@@ -335,7 +335,7 @@
     "lastName": "Anderson",
     "doe": "2022-12-22",
     "dob": "1997-01-09",
-    "phone": "958.374.2436x5663",
+    "phone": "+90 123 456 78 89",
     "email": "jason.anderson@gmail.com",
     "department": "Operations",
     "position": "Intern"
@@ -346,7 +346,7 @@
     "lastName": "Hamilton",
     "doe": "2025-01-26",
     "dob": "1993-06-15",
-    "phone": "510.076.3546",
+    "phone": "+90 123 456 78 89",
     "email": "amanda.hamilton@yahoo.com",
     "department": "Finance",
     "position": "Intern"
@@ -357,7 +357,7 @@
     "lastName": "Johnston",
     "doe": "2023-06-08",
     "dob": "1974-01-23",
-    "phone": "+1-319-416-2965x90195",
+    "phone": "+90 123 456 78 89",
     "email": "michael.johnston@gmail.com",
     "department": "Operations",
     "position": "Medior"
@@ -368,7 +368,7 @@
     "lastName": "Jones",
     "doe": "2020-11-23",
     "dob": "1997-09-01",
-    "phone": "+1-220-081-6161x060",
+    "phone": "+90 123 456 78 89",
     "email": "lynn.jones@yahoo.com",
     "department": "Marketing",
     "position": "Lead"
@@ -379,7 +379,7 @@
     "lastName": "Hernandez",
     "doe": "2021-10-26",
     "dob": "1973-02-12",
-    "phone": "+1-354-294-4837x878",
+    "phone": "+90 123 456 78 89",
     "email": "andrew.hernandez@yahoo.com",
     "department": "Operations",
     "position": "Manager"
@@ -390,7 +390,7 @@
     "lastName": "Ramirez",
     "doe": "2023-06-24",
     "dob": "1973-06-08",
-    "phone": "+1-229-319-9698x065",
+    "phone": "+90 123 456 78 89",
     "email": "daniel.ramirez@gmail.com",
     "department": "Marketing",
     "position": "Manager"
@@ -401,7 +401,7 @@
     "lastName": "Ward",
     "doe": "2022-05-11",
     "dob": "1975-07-04",
-    "phone": "+1-019-344-4602x74204",
+    "phone": "+90 123 456 78 89",
     "email": "michael.ward@gmail.com",
     "department": "Tech",
     "position": "Manager"
@@ -412,7 +412,7 @@
     "lastName": "Davidson",
     "doe": "2021-08-02",
     "dob": "1971-05-24",
-    "phone": "(077)444-3293x442",
+    "phone": "+90 123 456 78 89",
     "email": "maria.davidson@hotmail.com",
     "department": "HR",
     "position": "Intern"
@@ -423,7 +423,7 @@
     "lastName": "Wright",
     "doe": "2024-11-07",
     "dob": "1977-04-08",
-    "phone": "+1-755-103-2970",
+    "phone": "+90 123 456 78 89",
     "email": "christine.wright@yahoo.com",
     "department": "Operations",
     "position": "Junior"
@@ -434,7 +434,7 @@
     "lastName": "Weber",
     "doe": "2023-08-12",
     "dob": "1972-06-13",
-    "phone": "120-372-9872x986",
+    "phone": "+90 123 456 78 89",
     "email": "ryan.weber@gmail.com",
     "department": "Tech",
     "position": "Medior"
@@ -445,7 +445,7 @@
     "lastName": "Berry",
     "doe": "2024-11-26",
     "dob": "1978-05-27",
-    "phone": "(122)077-1901",
+    "phone": "+90 123 456 78 89",
     "email": "julie.berry@yahoo.com",
     "department": "Tech",
     "position": "Manager"
@@ -456,7 +456,7 @@
     "lastName": "Hughes",
     "doe": "2024-09-18",
     "dob": "2001-12-12",
-    "phone": "(500)337-4292x745",
+    "phone": "+90 123 456 78 89",
     "email": "deanna.hughes@hotmail.com",
     "department": "Operations",
     "position": "Manager"
@@ -467,7 +467,7 @@
     "lastName": "Rangel",
     "doe": "2022-03-27",
     "dob": "1990-11-20",
-    "phone": "210.558.7592",
+    "phone": "+90 123 456 78 89",
     "email": "kathleen.rangel@gmail.com",
     "department": "Analytics",
     "position": "Junior"
@@ -478,7 +478,7 @@
     "lastName": "Pennington",
     "doe": "2022-01-19",
     "dob": "1999-02-16",
-    "phone": "001-413-576-3393x9427",
+    "phone": "+90 123 456 78 89",
     "email": "michelle.pennington@hotmail.com",
     "department": "Operations",
     "position": "Lead"
@@ -489,7 +489,7 @@
     "lastName": "Cruz",
     "doe": "2024-02-26",
     "dob": "1997-09-04",
-    "phone": "(606)408-2972",
+    "phone": "+90 123 456 78 89",
     "email": "donald.cruz@gmail.com",
     "department": "Operations",
     "position": "Manager"
@@ -500,7 +500,7 @@
     "lastName": "Bean",
     "doe": "2021-01-26",
     "dob": "1972-05-18",
-    "phone": "856.100.7904x9339",
+    "phone": "+90 123 456 78 89",
     "email": "kevin.bean@gmail.com",
     "department": "Operations",
     "position": "Senior"
@@ -511,7 +511,7 @@
     "lastName": "Hunter",
     "doe": "2024-03-23",
     "dob": "1981-10-18",
-    "phone": "003-190-3823x4624",
+    "phone": "+90 123 456 78 89",
     "email": "juan.hunter@gmail.com",
     "department": "Analytics",
     "position": "Medior"
@@ -522,7 +522,7 @@
     "lastName": "Snyder",
     "doe": "2024-09-24",
     "dob": "1985-07-09",
-    "phone": "(923)913-9523x792",
+    "phone": "+90 123 456 78 89",
     "email": "joyce.snyder@hotmail.com",
     "department": "Tech",
     "position": "Manager"
@@ -533,7 +533,7 @@
     "lastName": "Harris",
     "doe": "2023-08-17",
     "dob": "1993-07-15",
-    "phone": "217.647.8786x55022",
+    "phone": "+90 123 456 78 89",
     "email": "anthony.harris@hotmail.com",
     "department": "Marketing",
     "position": "Junior"
@@ -544,7 +544,7 @@
     "lastName": "Moore",
     "doe": "2024-09-28",
     "dob": "1987-10-07",
-    "phone": "+1-177-485-1236x1787",
+    "phone": "+90 123 456 78 89",
     "email": "julian.moore@gmail.com",
     "department": "Tech",
     "position": "Junior"
@@ -555,7 +555,7 @@
     "lastName": "Lee",
     "doe": "2020-11-22",
     "dob": "1990-03-30",
-    "phone": "+1-796-420-9910x33129",
+    "phone": "+90 123 456 78 89",
     "email": "stephen.lee@hotmail.com",
     "department": "Analytics",
     "position": "Intern"
@@ -566,7 +566,7 @@
     "lastName": "Wilson",
     "doe": "2025-07-09",
     "dob": "1992-04-20",
-    "phone": "327.495.1218x838",
+    "phone": "+90 123 456 78 89",
     "email": "jim.wilson@hotmail.com",
     "department": "Analytics",
     "position": "Intern"
@@ -577,7 +577,7 @@
     "lastName": "Gordon",
     "doe": "2023-06-21",
     "dob": "1973-05-16",
-    "phone": "642.322.5562x220",
+    "phone": "+90 123 456 78 89",
     "email": "tammy.gordon@yahoo.com",
     "department": "Marketing",
     "position": "Intern"
@@ -588,7 +588,7 @@
     "lastName": "Wilson",
     "doe": "2024-10-11",
     "dob": "2001-08-13",
-    "phone": "260.189.1694x282",
+    "phone": "+90 123 456 78 89",
     "email": "sean.wilson@gmail.com",
     "department": "HR",
     "position": "Junior"
@@ -599,7 +599,7 @@
     "lastName": "Fisher",
     "doe": "2024-06-08",
     "dob": "2002-07-27",
-    "phone": "422-209-5824",
+    "phone": "+90 123 456 78 89",
     "email": "anthony.fisher@yahoo.com",
     "department": "Tech",
     "position": "Junior"
@@ -610,7 +610,7 @@
     "lastName": "Ball",
     "doe": "2022-10-25",
     "dob": "1970-08-05",
-    "phone": "+1-227-073-5684x170",
+    "phone": "+90 123 456 78 89",
     "email": "ethan.ball@gmail.com",
     "department": "Tech",
     "position": "Manager"
@@ -621,7 +621,7 @@
     "lastName": "Price",
     "doe": "2022-12-09",
     "dob": "1978-01-31",
-    "phone": "613-793-7149x110",
+    "phone": "+90 123 456 78 89",
     "email": "brandon.price@hotmail.com",
     "department": "Analytics",
     "position": "Junior"
@@ -632,7 +632,7 @@
     "lastName": "Nelson",
     "doe": "2023-05-30",
     "dob": "1978-03-06",
-    "phone": "425.167.9198",
+    "phone": "+90 123 456 78 89",
     "email": "john.nelson@gmail.com",
     "department": "Marketing",
     "position": "Manager"
@@ -643,7 +643,7 @@
     "lastName": "Mckee",
     "doe": "2021-09-09",
     "dob": "1984-12-29",
-    "phone": "254.979.7517x0764",
+    "phone": "+90 123 456 78 89",
     "email": "isabella.mckee@hotmail.com",
     "department": "HR",
     "position": "Intern"
@@ -654,7 +654,7 @@
     "lastName": "Carey",
     "doe": "2022-01-27",
     "dob": "1987-06-07",
-    "phone": "+1-651-655-4013",
+    "phone": "+90 123 456 78 89",
     "email": "duane.carey@hotmail.com",
     "department": "Analytics",
     "position": "Manager"
@@ -665,7 +665,7 @@
     "lastName": "Herrera",
     "doe": "2025-04-15",
     "dob": "1979-10-21",
-    "phone": "+1-574-831-6929",
+    "phone": "+90 123 456 78 89",
     "email": "daniel.herrera@hotmail.com",
     "department": "Finance",
     "position": "Intern"
@@ -676,7 +676,7 @@
     "lastName": "Stewart",
     "doe": "2021-07-29",
     "dob": "2002-06-17",
-    "phone": "(290)821-5074",
+    "phone": "+90 123 456 78 89",
     "email": "edward.stewart@yahoo.com",
     "department": "Analytics",
     "position": "Manager"
@@ -687,7 +687,7 @@
     "lastName": "Lopez",
     "doe": "2024-11-01",
     "dob": "1975-09-17",
-    "phone": "664.407.7914x54948",
+    "phone": "+90 123 456 78 89",
     "email": "melissa.lopez@hotmail.com",
     "department": "Operations",
     "position": "Medior"
@@ -698,7 +698,7 @@
     "lastName": "Sanchez",
     "doe": "2023-12-25",
     "dob": "1989-03-23",
-    "phone": "671.054.8167x509",
+    "phone": "+90 123 456 78 89",
     "email": "patricia.sanchez@hotmail.com",
     "department": "Finance",
     "position": "Junior"
@@ -709,7 +709,7 @@
     "lastName": "Obrien",
     "doe": "2024-06-06",
     "dob": "1996-10-31",
-    "phone": "001-843-322-6084x123",
+    "phone": "+90 123 456 78 89",
     "email": "david.obrien@yahoo.com",
     "department": "HR",
     "position": "Medior"
@@ -720,7 +720,7 @@
     "lastName": "Shaw",
     "doe": "2022-09-13",
     "dob": "2003-04-19",
-    "phone": "826.785.4295x93219",
+    "phone": "+90 123 456 78 89",
     "email": "molly.shaw@gmail.com",
     "department": "Marketing",
     "position": "Senior"
@@ -731,7 +731,7 @@
     "lastName": "Thomas",
     "doe": "2022-04-10",
     "dob": "1983-01-16",
-    "phone": "+1-202-718-3846x33769",
+    "phone": "+90 123 456 78 89",
     "email": "nicholas.thomas@hotmail.com",
     "department": "Tech",
     "position": "Junior"
@@ -742,7 +742,7 @@
     "lastName": "Erickson",
     "doe": "2025-01-02",
     "dob": "1970-11-19",
-    "phone": "001-515-630-4767x51993",
+    "phone": "+90 123 456 78 89",
     "email": "lawrence.erickson@yahoo.com",
     "department": "Marketing",
     "position": "Lead"
@@ -753,7 +753,7 @@
     "lastName": "Brown",
     "doe": "2024-07-10",
     "dob": "1997-05-31",
-    "phone": "+1-159-874-9545x9522",
+    "phone": "+90 123 456 78 89",
     "email": "angela.brown@hotmail.com",
     "department": "Operations",
     "position": "Lead"
@@ -764,7 +764,7 @@
     "lastName": "Diaz",
     "doe": "2023-04-28",
     "dob": "1973-06-22",
-    "phone": "769-181-3052x5936",
+    "phone": "+90 123 456 78 89",
     "email": "colleen.diaz@hotmail.com",
     "department": "Marketing",
     "position": "Medior"
@@ -775,7 +775,7 @@
     "lastName": "Parker",
     "doe": "2023-04-22",
     "dob": "1982-11-15",
-    "phone": "009.475.2243x98618",
+    "phone": "+90 123 456 78 89",
     "email": "charles.parker@gmail.com",
     "department": "Tech",
     "position": "Medior"
@@ -786,7 +786,7 @@
     "lastName": "Kaufman",
     "doe": "2023-04-21",
     "dob": "2000-03-17",
-    "phone": "853-485-0629",
+    "phone": "+90 123 456 78 89",
     "email": "andrew.kaufman@yahoo.com",
     "department": "Analytics",
     "position": "Lead"
@@ -797,7 +797,7 @@
     "lastName": "Ballard",
     "doe": "2021-05-27",
     "dob": "1978-01-29",
-    "phone": "+1-438-811-7088",
+    "phone": "+90 123 456 78 89",
     "email": "gregg.ballard@hotmail.com",
     "department": "Marketing",
     "position": "Junior"
@@ -808,7 +808,7 @@
     "lastName": "Hill",
     "doe": "2021-12-14",
     "dob": "1988-11-10",
-    "phone": "409.025.4149x558",
+    "phone": "+90 123 456 78 89",
     "email": "kenneth.hill@hotmail.com",
     "department": "Operations",
     "position": "Manager"
@@ -819,7 +819,7 @@
     "lastName": "Greene",
     "doe": "2024-06-07",
     "dob": "1983-12-26",
-    "phone": "807.034.9063",
+    "phone": "+90 123 456 78 89",
     "email": "daniel.greene@yahoo.com",
     "department": "Marketing",
     "position": "Junior"
@@ -830,7 +830,7 @@
     "lastName": "Small",
     "doe": "2024-03-08",
     "dob": "1979-12-18",
-    "phone": "001-110-761-3719x965",
+    "phone": "+90 123 456 78 89",
     "email": "michael.small@hotmail.com",
     "department": "Tech",
     "position": "Junior"
@@ -841,7 +841,7 @@
     "lastName": "Hatfield",
     "doe": "2024-11-04",
     "dob": "1996-10-01",
-    "phone": "(069)129-5477",
+    "phone": "+90 123 456 78 89",
     "email": "valerie.hatfield@gmail.com",
     "department": "Marketing",
     "position": "Intern"
@@ -852,7 +852,7 @@
     "lastName": "Stone",
     "doe": "2023-03-05",
     "dob": "1985-10-10",
-    "phone": "+1-733-292-9210x03461",
+    "phone": "+90 123 456 78 89",
     "email": "shawn.stone@gmail.com",
     "department": "Tech",
     "position": "Lead"
@@ -863,7 +863,7 @@
     "lastName": "Parrish",
     "doe": "2022-11-22",
     "dob": "1995-11-26",
-    "phone": "463.845.5064x8946",
+    "phone": "+90 123 456 78 89",
     "email": "ruben.parrish@hotmail.com",
     "department": "Finance",
     "position": "Lead"
@@ -874,7 +874,7 @@
     "lastName": "Rice",
     "doe": "2021-11-15",
     "dob": "1985-11-18",
-    "phone": "016.437.4475",
+    "phone": "+90 123 456 78 89",
     "email": "jacob.rice@hotmail.com",
     "department": "Analytics",
     "position": "Intern"
@@ -885,7 +885,7 @@
     "lastName": "Williams",
     "doe": "2023-03-04",
     "dob": "2003-04-25",
-    "phone": "001-221-361-5097x46464",
+    "phone": "+90 123 456 78 89",
     "email": "gina.williams@yahoo.com",
     "department": "Finance",
     "position": "Junior"
@@ -896,7 +896,7 @@
     "lastName": "Rodriguez",
     "doe": "2023-12-02",
     "dob": "1988-08-26",
-    "phone": "129-086-2752x821",
+    "phone": "+90 123 456 78 89",
     "email": "malik.rodriguez@yahoo.com",
     "department": "Marketing",
     "position": "Medior"
@@ -907,7 +907,7 @@
     "lastName": "Johnson",
     "doe": "2024-02-15",
     "dob": "2000-03-09",
-    "phone": "128.764.8837x3051",
+    "phone": "+90 123 456 78 89",
     "email": "patrick.johnson@yahoo.com",
     "department": "Tech",
     "position": "Intern"
@@ -918,7 +918,7 @@
     "lastName": "Miles",
     "doe": "2023-04-04",
     "dob": "2003-06-04",
-    "phone": "237-458-9422x09451",
+    "phone": "+90 123 456 78 89",
     "email": "debra.miles@gmail.com",
     "department": "Marketing",
     "position": "Senior"
@@ -929,7 +929,7 @@
     "lastName": "Jennings",
     "doe": "2021-06-25",
     "dob": "2001-04-18",
-    "phone": "(777)680-8870",
+    "phone": "+90 123 456 78 89",
     "email": "jennifer.jennings@gmail.com",
     "department": "HR",
     "position": "Senior"
@@ -940,7 +940,7 @@
     "lastName": "Davenport",
     "doe": "2025-03-12",
     "dob": "1990-12-12",
-    "phone": "(346)668-5827x965",
+    "phone": "+90 123 456 78 89",
     "email": "heather.davenport@hotmail.com",
     "department": "Marketing",
     "position": "Medior"
@@ -951,7 +951,7 @@
     "lastName": "Carroll",
     "doe": "2023-09-07",
     "dob": "1980-02-19",
-    "phone": "974-284-4304x9337",
+    "phone": "+90 123 456 78 89",
     "email": "edward.carroll@hotmail.com",
     "department": "Tech",
     "position": "Senior"
@@ -962,7 +962,7 @@
     "lastName": "Ramirez",
     "doe": "2023-03-03",
     "dob": "1986-02-10",
-    "phone": "(713)157-1090",
+    "phone": "+90 123 456 78 89",
     "email": "jason.ramirez@gmail.com",
     "department": "Marketing",
     "position": "Lead"
@@ -973,7 +973,7 @@
     "lastName": "Wang",
     "doe": "2023-07-08",
     "dob": "1969-11-23",
-    "phone": "5001926207",
+    "phone": "+90 123 456 78 89",
     "email": "alexis.wang@hotmail.com",
     "department": "Finance",
     "position": "Medior"
@@ -984,7 +984,7 @@
     "lastName": "Smith",
     "doe": "2024-09-23",
     "dob": "1988-06-21",
-    "phone": "448-077-3615x987",
+    "phone": "+90 123 456 78 89",
     "email": "danny.smith@yahoo.com",
     "department": "Marketing",
     "position": "Manager"
@@ -995,7 +995,7 @@
     "lastName": "Dunn",
     "doe": "2024-04-24",
     "dob": "1991-05-24",
-    "phone": "2028831822",
+    "phone": "+90 123 456 78 89",
     "email": "mary.dunn@gmail.com",
     "department": "Marketing",
     "position": "Intern"
@@ -1006,7 +1006,7 @@
     "lastName": "Davis",
     "doe": "2025-08-25",
     "dob": "1993-09-19",
-    "phone": "+1-929-461-2626x995",
+    "phone": "+90 123 456 78 89",
     "email": "kimberly.davis@yahoo.com",
     "department": "Analytics",
     "position": "Manager"
@@ -1017,7 +1017,7 @@
     "lastName": "Patterson",
     "doe": "2020-12-18",
     "dob": "1982-05-26",
-    "phone": "001-385-906-4072x8195",
+    "phone": "+90 123 456 78 89",
     "email": "danielle.patterson@gmail.com",
     "department": "Tech",
     "position": "Junior"
@@ -1028,7 +1028,7 @@
     "lastName": "Middleton",
     "doe": "2022-01-15",
     "dob": "1985-08-13",
-    "phone": "7514937490",
+    "phone": "+90 123 456 78 89",
     "email": "mark.middleton@gmail.com",
     "department": "Tech",
     "position": "Lead"
@@ -1039,7 +1039,7 @@
     "lastName": "Lewis",
     "doe": "2021-07-18",
     "dob": "1972-03-30",
-    "phone": "588.827.9000x5702",
+    "phone": "+90 123 456 78 89",
     "email": "jason.lewis@gmail.com",
     "department": "Finance",
     "position": "Manager"
@@ -1050,7 +1050,7 @@
     "lastName": "Boyd",
     "doe": "2023-11-16",
     "dob": "1981-11-24",
-    "phone": "001-837-944-5785x7049",
+    "phone": "+90 123 456 78 89",
     "email": "kevin.boyd@gmail.com",
     "department": "Tech",
     "position": "Intern"
@@ -1061,7 +1061,7 @@
     "lastName": "Arnold",
     "doe": "2023-01-13",
     "dob": "1976-02-20",
-    "phone": "001-456-106-1970",
+    "phone": "+90 123 456 78 89",
     "email": "patrick.arnold@yahoo.com",
     "department": "HR",
     "position": "Manager"
@@ -1072,7 +1072,7 @@
     "lastName": "Stewart",
     "doe": "2025-05-02",
     "dob": "1983-09-05",
-    "phone": "+1-907-237-6389x4535",
+    "phone": "+90 123 456 78 89",
     "email": "crystal.stewart@gmail.com",
     "department": "Tech",
     "position": "Junior"
@@ -1083,7 +1083,7 @@
     "lastName": "Decker",
     "doe": "2024-12-16",
     "dob": "1971-02-14",
-    "phone": "+1-029-377-9789x646",
+    "phone": "+90 123 456 78 89",
     "email": "miguel.decker@hotmail.com",
     "department": "HR",
     "position": "Lead"
@@ -1094,7 +1094,7 @@
     "lastName": "Jordan",
     "doe": "2022-04-23",
     "dob": "1970-04-07",
-    "phone": "+1-362-205-3658",
+    "phone": "+90 123 456 78 89",
     "email": "robert.jordan@yahoo.com",
     "department": "Analytics",
     "position": "Manager"

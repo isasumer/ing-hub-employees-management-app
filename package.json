@@ -44,7 +44,8 @@
     "@vaadin/router": "^2.0.0",
     "lit": "^3.2.0",
     "lit-element-router": "^2.0.3",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
