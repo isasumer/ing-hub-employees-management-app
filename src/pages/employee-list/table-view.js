@@ -1,7 +1,10 @@
 import {LitElement, html} from 'lit';
 import {getEmployees} from '../../utils/storageHelper';
-import { addLanguageChangeListener, removeLanguageChangeListener } from '../../utils/languageHelper.js';
-import { getMessages } from '../../i18n/getLanguages.js';
+import {
+  addLanguageChangeListener,
+  removeLanguageChangeListener,
+} from '../../utils/languageHelper.js';
+import {getMessages} from '../../i18n/getLanguages.js';
 
 export class TableView extends LitElement {
   static properties = {
@@ -76,28 +79,59 @@ export class TableView extends LitElement {
         (i >= this.currentPage - 2 && i <= this.currentPage + 2)
       ) {
         pageNumbers.push(i);
-      } else if (
-        i === this.currentPage - 3 ||
-        i === this.currentPage + 3
-      ) {
+      } else if (i === this.currentPage - 3 || i === this.currentPage + 3) {
         pageNumbers.push('...');
       }
     }
 
     return html`
       <div class="pagination-controls">
-        <button @click="${this.previousPage}" ?disabled=${this.currentPage === 1}>&lt;</button>
-        ${pageNumbers.map(
-          (page) =>
-            html`<button
-              @click="${() => this.goToPage(page)}"
-              class="${page === this.currentPage ? 'active' : ''}"
-              ?disabled=${page === '...'}
-            >
-              ${page}
-            </button>`
-        )}
-        <button @click="${this.nextPage}" ?disabled=${this.currentPage === totalPages}>&gt;</button>
+        <button
+          class="pagination-btn left-arrowbtn"
+          @click="${this.previousPage}"
+          ?disabled=${this.currentPage === 1}
+        >
+          ${this.currentPage > 1
+            ? html`<img
+                class="arrow"
+                src="src/assets/icons/arrow-primary.svg"
+                alt="arrow"
+              />`
+            : html`<img class="arrow" src="src/assets/icons/arrow.svg" alt="arrow" />`}
+        </button>
+        <div class="pagination-numbers">
+          ${pageNumbers.map(
+            (page) =>
+              html`<button
+                @click="${() => this.goToPage(page)}"
+                class="pagination-btn ${page === this.currentPage
+                  ? 'pagination-active'
+                  : ''}"
+                ?disabled=${page === '...'}
+              >
+                ${page}
+              </button>`
+          )}
+        </div>
+        <button
+          class="pagination-btn right-arrowbtn"
+          @click="${this.nextPage}"
+          ?disabled=${this.currentPage === totalPages}
+        >
+          ${this.currentPage < totalPages
+            ? html`<img
+                class="arrow"
+                src="src/assets/icons/arrow-primary.svg"
+                alt="arrow"
+                style="transform: rotate(180deg);"
+              />`
+            : html`<img
+                class="arrow"
+                src="src/assets/icons/arrow.svg"
+                alt="arrow"
+                style="transform: rotate(180deg);"
+              />`}
+        </button>
       </div>
     `;
   }
@@ -111,7 +145,7 @@ export class TableView extends LitElement {
   render() {
     return html`<div>
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
-
+    <div class="table-container">
       <table class="table">
         <thead>
           <tr>
@@ -182,6 +216,7 @@ export class TableView extends LitElement {
         </tbody>
       </table>
       ${this.renderPagination()}
+    </div>
     </div>`;
   }
 
@@ -196,8 +231,6 @@ export class TableView extends LitElement {
     super.disconnectedCallback();
   }
 }
-
-
 
 customElements.define('table-view', TableView);
 

@@ -1,162 +1,204 @@
- .employee-list{
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    gap:24px;
-    padding:36px;
-    background:var(--light-gray-color);
- }
- .title{
-    font-size:24px;
-    font-weight:600;
-    color:var(--primary-color);
- }
- .employee-list-header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-   
-  }
-  
-  .view-buttons,
-  .action-buttons{
-    display:flex;
-    gap:10px;
-    align-items:center;
+.employee-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px;
+  background: var(--light-gray-color);
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.employee-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.action-buttons{
-  gap:0;
+.view-buttons,
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
+.action-buttons {
+  gap: 0;
+}
 
 .view-btn,
-.action-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    width:36px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:4px;
-    overflow:hidden;
-  }
-  .view,
-  .action{
-    height:100%;
-    width:100%;
-    object-fit:cover;
-  }
-.edit-icon,
-.delete-icon{
-  height:20px;
-  width:20px;
-  object-fit:cover;
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
 }
-  .table{
-    width:100%;
-    background:var(--white-color);
-    border-radius:8px;
-    overflow:hidden;
-    padding:12px;
-  }
+.view,
+.action {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.edit-icon,
+.delete-icon {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
 
-  table thead tr th{
-    color:var(--primary-color);
-    font-weight:600;
-    padding:12px 8px;
-  }
-  table tbody tr td{
-    color:var(--gray-color);
-    font-weight:400;
-  }
+.table-container {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  background: var(--white-color);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 12px;
+  border-collapse: collapse;
+  height: 540px;
+}
+
+
+tr {
+  border-bottom: 1pt solid var(--border-color);
+}
+table thead tr th {
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 12px 8px;
+}
+table tbody tr td {
+  color: var(--gray-color);
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 0;
+}
 .firstName,
 .lastName {
-    color: var(--black-color);
-  }
+  color: var(--black-color);
+}
 
-  .checkbox{
-    width:16px;
-    height:16px;
-    cursor:pointer;
-    border-radius:4px;  }
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
+.grid-view {
+  display: grid;
+  gap: 60px;
+  padding: 24px;
+}
 
-    .grid-view{
-      display:grid;
-      gap:60px;
-      padding:24px;
+.employee-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  background: var(--white-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 24px 16px;
+  gap: 24px;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
+}
 
-    }
+.employee-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
-    .employee-card{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      width:100%;
-      background:var(--white-color);
-      border-radius:8px;
-      border:1px solid var(--border-color);
-      padding:24px 16px;
-      gap:24px;
-      box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
-    }
+.employee-card-item-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-gray-color);
+}
 
-    .employee-card-item{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
+.employee-card-item-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-color);
+}
 
-    .employee-card-item-label{
-      font-size:14px;
-      font-weight:600;
-      color:var(--dark-gray-color);
-    }
+.employee-card-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-    .employee-card-item-value{
-      font-size:16px;
-      font-weight:400;
-      color:var(--black-color);
-    }
+.employee-card-edit-btn,
+.employee-card-delete-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
 
-    .employee-card-actions{
-      display:flex;
-      gap:10px;
-      align-items:center;
-    }
+.employee-card-edit-btn {
+  background: var(--secondary-color);
+}
+.employee-card-delete-btn {
+  background: var(--primary-color);
+}
 
-    .employee-card-edit-btn,
-    .employee-card-delete-btn{
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      border-radius:4px;
-      padding:8px 16px;
-      color:var(--white-color);
-      font-size:14px;
-      font-weight:600;
-      border:none;
-    }      
+.employee-card-edit-btn-icon,
+.employee-card-delete-btn-icon {
+  height: 12px;
+  width: 12px;
+}
 
-    .employee-card-edit-btn{
-      background:var(--secondary-color);
+.pagination-controls {
+  margin-top: 24px;
+}
+.pagination-controls,
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
 
-    }
-    .employee-card-delete-btn{
-      background:var(--primary-color);
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+}
 
-    }
+.pagination-active {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 16px;
+}
 
-    .employee-card-edit-btn-icon{
-      height:12px;
-      width:12px;
-    }
-
-    .employee-card-delete-btn-icon{
-      height:12px;
-      width:12px;
-    }
+.arrow {
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+}
