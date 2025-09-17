@@ -2,7 +2,7 @@
   --primary-color: #ff6200 ;
   --secondary-color: #7015cb;
   --text-color: #333;
-  --background-color: #f5f5f5;
+  --background-color: #d3d3d361;
   --border-color: #e0e0e0;
   --black-color: #000;
   --white-color: #fff;
@@ -18,3 +18,17 @@
     margin:0;
     padding:0;
   }
+
+  .app-root{
+    background: var(--background-color);
+  }
+
+
+  .app-content{
+    height: calc(100vh - 69px);  /* 69px is the height of the app-header */
+    padding: 36px;
+    overflow-y: auto;
+  }
+
+  
+  

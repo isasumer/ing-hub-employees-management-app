@@ -44,7 +44,7 @@ export class EmployeeList extends LitElement {
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
       <div class="employee-list">
         <div class="employee-list-header">
-          <div class="title">${getMessages('019')}</div>
+          <page-header title="${getMessages('019')}"></page-header>
           <div class="view-buttons">
             <button
               class="view-btn"

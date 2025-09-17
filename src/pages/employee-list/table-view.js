@@ -234,14 +234,3 @@ export class TableView extends LitElement {
 
 customElements.define('table-view', TableView);
 
-/** {
-    "id": "1",
-    "firstName": "Jennifer",
-    "lastName": "Andrews",
-    "doe": "2024-08-09",
-    "dob": "1983-12-10",
-    "phone": "(869)169-4833x190",
-    "email": "jennifer.andrews@hotmail.com",
-    "department": "Analytics",
-    "position": "Junior"
-  }, */

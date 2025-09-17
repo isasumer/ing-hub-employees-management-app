@@ -14,9 +14,10 @@ export class App extends LitElement {
 
   render() {
     return html`
+      <link rel="stylesheet" href="src/styles.css" />
       <div class="app-root">
         <app-header></app-header>
-        <div id="outlet"></div>
+        <div id="outlet" class="app-content"></div>
       </div>
     `;
   }
