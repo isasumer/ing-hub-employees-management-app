@@ -14,6 +14,8 @@ suite('edit-employee', () => {
   });
 
   test('renders header and employee name text', async () => {
+    await import('../src/i18n/getLanguages.js');
+    window.dispatchEvent(new CustomEvent('app-language', {detail: 'en'}));
     const el = await fixture(html`<edit-employee></edit-employee>`);
     await el.updateComplete;
     const text = el.shadowRoot.querySelector('.edit-employee-text').textContent;
