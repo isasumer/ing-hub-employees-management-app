@@ -1,0 +1,104 @@
+.add-new-employee {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--white-color);
+    border-radius: 8px;
+    padding: 48px;
+  }
+  
+  .add-new-employee form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .form-container input,
+  .form-container select {
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid var(--black-color);
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-color);
+    background: var(--white-color);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:focus {
+      border-color: var(--primary-color);
+    }
+  }
+  
+  .label-text {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .edit-employee-text{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0;
+    color: var(--black-color);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .form-button {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 60px;
+    margin-top: 48px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background: var(--primary-color);
+    color: var(--white-color);
+  }
+  
+  .cancel-button {
+    background: var(--white-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+  
+  @media (max-width: 856px) {
+    .form-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 624px) {
+    .form-container {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding-right: 16px;
+    }
+    .button-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-button {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .form-container input,
+    .form-container select {
+      width: 100%;
+    }
+  }
+  

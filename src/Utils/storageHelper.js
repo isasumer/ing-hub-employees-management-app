@@ -14,15 +14,20 @@ export const addEmployee = (employee) => {
 };
 
 export const updateEmployee = (updatedEmployee) => {
-  const employees = getEmployees().map(employee => 
-    employee.id === updatedEmployee.id ? updatedEmployee : employee
-  );
+  const employees = getEmployees();
+  const index = employees.findIndex(employee => employee.id === updatedEmployee.id);
+  employees[index] = updatedEmployee;
   saveEmployees(employees);
 };
 
 export const deleteEmployee = (id) => {
   const employees = getEmployees().filter(employee => employee.id !== id);
   saveEmployees(employees);
+};
+
+export const getEmployeeById = (id) => {
+  const employees = getEmployees();
+  return employees.find(employee => employee.id === id);
 };
 
 export const initializeEmployees = async () => {

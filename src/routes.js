@@ -1,5 +1,6 @@
 import './pages/employee-list';
 import './pages/add-new-employee/index';
+import './pages/edit-employee/index';
 import './pages/home';
 import {Router} from '@vaadin/router';
 
@@ -20,7 +21,7 @@ export const views = [
     path: 'edit-employee',
     component: 'edit-employee',
     title: 'Edit Employee',
-    action: async () => await import('./pages/edit-employee'),
+    action: async () => await import('./pages/edit-employee/index'),
   },
   {
     path: 'add-new-employee',

@@ -36,4 +36,6 @@ export const enMessages = {
     "035": "Senior",
     "036": "Please select position.",
     "037": "Please select department.",
+    "038": "Proceed",
+    "039": "Selected Employee record of # will be deleted",
 }

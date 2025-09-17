@@ -1,5 +1,8 @@
 import {LitElement, html} from 'lit';
-import {getEmployees} from '../../utils/storageHelper';
+import {
+  getEmployees,
+  deleteEmployee as removeEmployee,
+} from '../../utils/storageHelper';
 import {
   addLanguageChangeListener,
   removeLanguageChangeListener,
@@ -16,6 +19,8 @@ export class TableView extends LitElement {
     selectedEmployees: {type: Array},
     selectedAll: {type: Boolean},
     searchQuery: {type: String},
+    showDeleteConfirmation: {type: Boolean},
+    selectedEmployeeToDelete: {type: Number},
   };
 
   constructor() {
@@ -27,6 +32,8 @@ export class TableView extends LitElement {
     this.searchQuery = '';
     this.selectedEmployeeId = null;
     this.selectedAll = false;
+    this.showDeleteConfirmation = false;
+    this.selectedEmployeeToDelete = null;
     window.addEventListener('language-changed', () => {
       this.requestUpdate();
     });
@@ -97,7 +104,11 @@ export class TableView extends LitElement {
                 src="src/assets/icons/arrow-primary.svg"
                 alt="arrow"
               />`
-            : html`<img class="arrow" src="src/assets/icons/arrow.svg" alt="arrow" />`}
+            : html`<img
+                class="arrow"
+                src="src/assets/icons/arrow.svg"
+                alt="arrow"
+              />`}
         </button>
         <div class="pagination-numbers">
           ${pageNumbers.map(
@@ -142,34 +153,56 @@ export class TableView extends LitElement {
     }
   }
 
+  editEmployee(employeeId) {
+    window.location.href = `/edit-employee?id=${employeeId}`;
+  }
+
+  deleteEmployee(employeeId) {
+    this.selectedEmployeeToDelete = employeeId;
+    this.showDeleteConfirmation = true;
+  }
+
+  confirmDelete() {
+    if (!this.selectedEmployeeToDelete) return;
+    removeEmployee(this.selectedEmployeeToDelete);
+    this.employees = getEmployees();
+    this.showDeleteConfirmation = false;
+    this.selectedEmployeeToDelete = null;
+  }
+
+  cancelDelete() {
+    this.showDeleteConfirmation = false;
+    this.selectedEmployeeToDelete = null;
+  }
+
   render() {
     return html`<div>
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
-    <div class="table-container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>
-              <input
-                type="checkbox"
-                class="checkbox"
-                @change="${this.toggleSelectAll}"
-              />
-            </th>
-            <th>${getMessages('008')}</th>
-            <th>${getMessages('009')}</th>
-            <th>${getMessages('010')}</th>
-            <th>${getMessages('011')}</th>
-            <th>${getMessages('012')}</th>
-            <th>${getMessages('013')}</th>
-            <th>${getMessages('014')}</th>
-            <th>${getMessages('015')}</th>
-            <th>${getMessages('016')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${this.getPaginatedEmployees()?.map(
-            (employee) => html`
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  @change="${this.toggleSelectAll}"
+                />
+              </th>
+              <th>${getMessages('008')}</th>
+              <th>${getMessages('009')}</th>
+              <th>${getMessages('010')}</th>
+              <th>${getMessages('011')}</th>
+              <th>${getMessages('012')}</th>
+              <th>${getMessages('013')}</th>
+              <th>${getMessages('014')}</th>
+              <th>${getMessages('015')}</th>
+              <th>${getMessages('016')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.getPaginatedEmployees()?.map(
+              (employee) => html`
               <tr>
                 <td class="checkbox-row">
                   <input
@@ -188,7 +221,7 @@ export class TableView extends LitElement {
                   <div class="action-buttons">
                     <button
                       class="action-btn"
-                      @click=${() => this.editEmployee(employee.id)}
+                      // @click=${() => this.editEmployee(employee.id)}
                       title="Table"
                     >
                       <img
@@ -212,11 +245,29 @@ export class TableView extends LitElement {
                 </td>
               </tr>
             `
-          )}
-        </tbody>
-      </table>
-      ${this.renderPagination()}
-    </div>
+            )}
+          </tbody>
+        </table>
+        ${this.renderPagination()}
+      </div>
+      ${this.showDeleteConfirmation ? this.renderDeleteConfirmation() : ''}
+    </div>`;
+  }
+
+  renderDeleteConfirmation() {
+    return html`<div class="modal-backdrop" @click=${this.onBackdropClick}>
+      <div class="modal" @click=${(e) => e.stopPropagation()}>
+        <div class="modal-header">${getMessages('023')}</div>
+        <div class="modal-body">${this.confirmTextTemplate()}</div>
+        <div class="modal-action-buttons">
+          <button class="modal-btn confirm-delete" @click=${this.confirmDelete}>
+            ${getMessages('038')}
+          </button>
+          <button class="modal-btn cancel-delete" @click=${this.cancelDelete}>
+            ${getMessages('025')}
+          </button>
+        </div>
+      </div>
     </div>`;
   }
 
@@ -230,7 +281,23 @@ export class TableView extends LitElement {
     removeLanguageChangeListener(this._onLanguageChange);
     super.disconnectedCallback();
   }
+
+  confirmTextTemplate() {
+    const employee = this.employees.find(
+      (e) => e.id === this.selectedEmployeeToDelete
+    );
+    if (!employee) return html``;
+    return html`<div>
+      ${getMessages('039').replace(
+        '#',
+        employee.firstName + ' ' + employee.lastName
+      )}
+    </div>`;
+  }
+
+  onBackdropClick() {
+    this.cancelDelete();
+  }
 }
 
 customElements.define('table-view', TableView);
-

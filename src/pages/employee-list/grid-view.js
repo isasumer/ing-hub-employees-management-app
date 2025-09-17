@@ -1,7 +1,13 @@
 import {LitElement, html} from 'lit';
-import {getEmployees} from '../../utils/storageHelper';
+import {
+  getEmployees,
+  deleteEmployee as removeEmployee,
+} from '../../utils/storageHelper';
 import {getMessages} from '../../i18n/getLanguages';
-import { addLanguageChangeListener, removeLanguageChangeListener } from '../../utils/languageHelper.js';
+import {
+  addLanguageChangeListener,
+  removeLanguageChangeListener,
+} from '../../utils/languageHelper.js';
 
 export class GridView extends LitElement {
   static properties = {
@@ -11,6 +17,8 @@ export class GridView extends LitElement {
     pageSize: {type: Number},
     selectedEmployeeId: {type: Number},
     searchQuery: {type: String},
+    showConfirm: {type: Boolean},
+    pendingDeleteId: {type: Number},
   };
 
   constructor() {
@@ -21,6 +29,8 @@ export class GridView extends LitElement {
     this.pageSize = 10;
     this.searchQuery = '';
     this.selectedEmployeeId = null;
+    this.showConfirm = false;
+    this.pendingDeleteId = null;
 
     window.addEventListener('language-changed', () => {
       this.requestUpdate();
@@ -56,30 +66,65 @@ export class GridView extends LitElement {
         (i >= this.currentPage - 2 && i <= this.currentPage + 2)
       ) {
         pageNumbers.push(i);
-      } else if (
-        i === this.currentPage - 3 ||
-        i === this.currentPage + 3
-      ) {
+      } else if (i === this.currentPage - 3 || i === this.currentPage + 3) {
         pageNumbers.push('...');
       }
     }
 
     return html`
-      <div class="pagination-controls">
-        <button @click="${this.previousPage}" ?disabled=${this.currentPage === 1}>&lt;</button>
+    <div class="pagination-controls">
+      <button
+        class="pagination-btn left-arrowbtn"
+        @click="${this.previousPage}"
+        ?disabled=${this.currentPage === 1}
+      >
+        ${this.currentPage > 1
+          ? html`<img
+              class="arrow"
+              src="src/assets/icons/arrow-primary.svg"
+              alt="arrow"
+            />`
+          : html`<img
+              class="arrow"
+              src="src/assets/icons/arrow.svg"
+              alt="arrow"
+            />`}
+      </button>
+      <div class="pagination-numbers">
         ${pageNumbers.map(
           (page) =>
             html`<button
               @click="${() => this.goToPage(page)}"
-              class="${page === this.currentPage ? 'active' : ''}"
+              class="pagination-btn ${page === this.currentPage
+                ? 'pagination-active'
+                : ''}"
               ?disabled=${page === '...'}
             >
               ${page}
             </button>`
         )}
-        <button @click="${this.nextPage}" ?disabled=${this.currentPage === totalPages}>&gt;</button>
       </div>
-    `;
+      <button
+        class="pagination-btn right-arrowbtn"
+        @click="${this.nextPage}"
+        ?disabled=${this.currentPage === totalPages}
+      >
+        ${this.currentPage < totalPages
+          ? html`<img
+              class="arrow"
+              src="src/assets/icons/arrow-primary.svg"
+              alt="arrow"
+              style="transform: rotate(180deg);"
+            />`
+          : html`<img
+              class="arrow"
+              src="src/assets/icons/arrow.svg"
+              alt="arrow"
+              style="transform: rotate(180deg);"
+            />`}
+      </button>
+    </div>
+  `;
   }
 
   goToPage(page) {
@@ -91,24 +136,47 @@ export class GridView extends LitElement {
   render() {
     return html`
       <link rel="stylesheet" href="src/pages/employee-list/employee-list.css" />
-      <div
-        class="grid-view"
-        style="grid-template-columns:1fr 1fr;"
-      >
-        ${this.getPaginatedEmployees()?.map((employee) => this.renderEmployeeCard(employee))}
+      <div class="grid-view" style="grid-template-columns:1fr 1fr;">
+        ${this.getPaginatedEmployees()?.map((employee) =>
+          this.renderEmployeeCard(employee)
+        )}
       </div>
       ${this.renderPagination()}
+      ${this.showConfirm ? this.renderDeleteConfirmation() : ''}
     `;
   }
 
+
+  renderDeleteConfirmation() {
+    return html`<div class="modal-backdrop" @click=${this.onBackdropClick}>
+      <div class="modal" @click=${(e) => e.stopPropagation()}>
+        <div class="modal-header">${getMessages('023')}</div>
+        <div class="modal-body">${this.confirmTextTemplate()}</div>
+        <div class="modal-action-buttons">
+          <button class="modal-btn confirm-delete" @click=${this.confirmDelete}>
+            ${getMessages('038')}
+          </button>
+          <button class="modal-btn cancel-delete" @click=${this.cancelDelete}>
+            ${getMessages('025')}
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }
   renderEmployeeCard(employee) {
+    function editEmployee(employeeId) {
+      window.location.href = `/edit-employee?id=${employeeId}`;
+    }
     return html`
       <div class="employee-card">
         ${Object.entries(employee)
           .filter(([key]) => key !== 'id')
           .map(([key, value]) => this.renderEmployeeCardItem(key, value))}
         <div class="employee-card-actions">
-          <button class="employee-card-edit-btn" @click=${() => this.editEmployee(employee.id)}>
+          <button
+            class="employee-card-edit-btn"
+            @click=${() => editEmployee(employee.id)}
+          >
             <img
               class="employee-card-edit-btn-icon"
               src="src/assets/icons/edit-white.svg"
@@ -116,7 +184,10 @@ export class GridView extends LitElement {
             />
             ${getMessages('018')}
           </button>
-          <button class="employee-card-delete-btn" @click=${() => this.deleteEmployee(employee.id)}>
+          <button
+            class="employee-card-delete-btn"
+            @click=${() => this.deleteEmployee(employee.id)}
+          >
             <img
               class="employee-card-delete-btn-icon"
               src="src/assets/icons/trash-white.svg"
@@ -153,12 +224,40 @@ export class GridView extends LitElement {
     addLanguageChangeListener(this._onLanguageChange);
   }
 
+  deleteEmployee(employeeId) {
+    this.pendingDeleteId = employeeId;
+    this.showConfirm = true;
+  }
+
+  cancelDelete = () => {
+    this.showConfirm = false;
+    this.pendingDeleteId = null;
+  };
+
+  onBackdropClick = () => {
+    this.cancelDelete();
+  };
+
+  confirmTextTemplate() {
+    const employee = this.employees.find((e) => e.id === this.pendingDeleteId);
+    if (!employee) return '';
+    return html`<div>
+      ${getMessages('039').replace('#', employee.firstName + ' ' + employee.lastName)}
+    </div>`;
+  }
+
+  confirmDelete = () => {
+    if (this.pendingDeleteId == null) return;
+    removeEmployee(this.pendingDeleteId);
+    this.employees = getEmployees();
+    this.showConfirm = false;
+    this.pendingDeleteId = null;
+  };
+
   disconnectedCallback() {
     removeLanguageChangeListener(this._onLanguageChange);
     super.disconnectedCallback();
   }
 }
-
-
 
 customElements.define('grid-view', GridView);

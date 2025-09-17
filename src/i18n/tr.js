@@ -36,4 +36,6 @@ export const trMessages = {
   '035': 'Senior',
   '036': 'Pozisyon seçiniz.',
   '037': 'Departman seçiniz.',
+  '038': 'Devam',
+  '039': '# çalışan kaydı silinecek',
 };
